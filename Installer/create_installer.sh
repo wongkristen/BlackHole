@@ -6,9 +6,9 @@
 # it may need execute permissions first by running this command:
 #   chmod +x create_installer.sh
 
-driverName="BlackHole"
+driverName="Nutshell"
 devTeamID="Q5C99V536K" # ⚠️ Replace this with your own developer team ID
-notarize=true # To skip notarization, set this to false
+notarize=false # To skip notarization, set this to false
 notarizeProfile="notarize" # ⚠️ Replace this with your own notarytool keychain profile name
 
 ############################################################################
@@ -106,7 +106,6 @@ for channels in 2; do #16 64 128 256; do
     # Build
     installerPkgName="$driverVartiantName-$version.pkg"
     productbuild \
-      --sign $devTeamID \
       --distribution distribution.xml \
       --resources . \
       --package-path $driverName.pkg $installerPkgName

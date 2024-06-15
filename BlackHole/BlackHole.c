@@ -150,7 +150,7 @@ struct ObjectInfo {
 
 
 #ifndef kDriver_Name
-#define                             kDriver_Name                        "BlackHole"
+#define                             kDriver_Name                        "Nutshell"
 #endif
 
 #ifndef kPlugIn_BundleID
@@ -158,7 +158,7 @@ struct ObjectInfo {
 #endif
 
 #ifndef kPlugIn_Icon
-#define                             kPlugIn_Icon                        "BlackHole.icns"
+#define                             kPlugIn_Icon                        "nutshell_squirrel.icns"
 #endif
 
 #ifndef kHas_Driver_Name_Format
