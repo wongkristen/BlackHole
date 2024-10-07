@@ -7,7 +7,7 @@
 #   chmod +x create_installer.sh
 
 driverName="Nutshell"
-devTeamID="Q5C99V536K" # ⚠️ Replace this with your own developer team ID
+devTeamID="85D83Z5L2X" # ⚠️ Replace this with your own developer team ID
 notarize=false # To skip notarization, set this to false
 notarizeProfile="notarize" # ⚠️ Replace this with your own notarytool keychain profile name
 
@@ -33,8 +33,8 @@ fi
 for channels in 2; do #16 64 128 256; do
     # Env
     ch=$channels"ch"
-    driverVartiantName=$driverName$ch
-    bundleID="audio.existential.$driverVartiantName"
+    driverVartiantName=$driverName
+    bundleID="audio.$driverVartiantName"
     
     # Build
     xcodebuild \
@@ -82,6 +82,10 @@ for channels in 2; do #16 64 128 256; do
     
     echo "<?xml version=\"1.0\" encoding='utf-8'?>
     <installer-gui-script minSpecVersion='2'>
+        <background alignment='bottomleft' file='nutshell_logo.png' mime-type='image/png'/>
+        <background file='crosstv.gif' mime-type='image/gif' scaling='proportional'/>
+#        <background-darkAqua alignment='bottomleft' file='nutshell_logo.png' mime-type='image/png' scaling='proportional'/>
+        <background-darkAqua file='crosstv.gif' mime-type='image/gif' scaling='proportional'/>
         <title>$driverName: Audio Loopback Driver ($ch) $version</title>
         <welcome file='welcome.html'/>
         <license file='../LICENSE'/>

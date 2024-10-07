@@ -154,11 +154,11 @@ struct ObjectInfo {
 #endif
 
 #ifndef kPlugIn_BundleID
-#define                             kPlugIn_BundleID                    "audio.existential.BlackHole2ch"
+#define                             kPlugIn_BundleID                    "audio.Nutshell"
 #endif
 
 #ifndef kPlugIn_Icon
-#define                             kPlugIn_Icon                        "nutshell_squirrel.icns"
+#define                             kPlugIn_Icon                        "Nutshell_logo.icns"
 #endif
 
 #ifndef kHas_Driver_Name_Format
